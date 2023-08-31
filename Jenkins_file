@@ -7,9 +7,14 @@ pipeline{
 			}
 
 		}
-		stage ('Production'){
+		stage ('STAGING'){
+		    steps{
+		        echo "Final Testing"
+		    }
+		}
+		stage ('PRODUCTION'){
 			steps{
-			echo 'We are live'
+			echo "We are live"
 			}
 		}
 
