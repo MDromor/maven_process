@@ -27,7 +27,7 @@ pipeline{
                 git changelog: false, credentialsId: 'Git_update', poll: false, url: 'https://github.com/MDromor/maven_process.git'
             }
         }
-        stage('List Files) {
+        stage('List Files') {
             steps{
             sh 'ls-lrt
 	}
