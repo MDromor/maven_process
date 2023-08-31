@@ -22,8 +22,14 @@ pipeline{
 			echo "We are live"
 			}
 		}
-
-
+        stage('git checkout'){
+            steps{
+                git changelog: false, credentialsId: 'Git_update', poll: false, url: 'https://github.com/MDromor/maven_process.git'
+            }
+        }
+        stage('List Files) {
+            steps{
+            sh 'ls-lrt
 	}
 
 }
