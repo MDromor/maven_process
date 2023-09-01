@@ -29,7 +29,7 @@ pipeline{
         }
         stage('List Files') {
             steps{
-            bat 'dir'
+            sh bat 'dir'
             }
         }
 	}
