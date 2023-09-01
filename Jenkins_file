@@ -28,6 +28,11 @@ pipeline{
             }
         }
 
+        stage('List File){
+            steps{
+                sh 'ls -lrt'
+            }
+        }
 	}
 
 }
