@@ -41,7 +41,7 @@ pipeline{
         }
         stage('env variable'){
             steps{
-                echo '$db-name'
+               sh 'echo "$db-name"'
 
             }
         }
