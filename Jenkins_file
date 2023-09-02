@@ -1,5 +1,11 @@
 pipeline{
 	agent any
+
+	environment{
+	    version = '1.7.3'
+	    db-name = 'Ibt_db'
+	}
+
 	stages{
 		stage('HELLO'){
 			steps{
@@ -31,6 +37,12 @@ pipeline{
         stage('List File'){
             steps{
                 sh 'ls -lrt'
+            }
+        }
+        stage('env variable'){
+            steps{
+                echo '$db-name'
+
             }
         }
 	}
