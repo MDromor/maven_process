@@ -28,7 +28,7 @@ pipeline{
             }
         }
 
-        stage('List File){
+        stage('List File'){
             steps{
                 bat dir
             }
