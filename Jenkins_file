@@ -3,7 +3,7 @@ pipeline{
 
 	environment{
 	    version = '1.7.3'
-	    db-name = 'Ibt_db'
+	    db_name = 'Ibt_db'
 	}
 
 	stages{
@@ -41,7 +41,7 @@ pipeline{
         }
         stage('env variable'){
             steps{
-               sh 'echo "$version"'
+               sh 'echo "$version" '
 
             }
         }
