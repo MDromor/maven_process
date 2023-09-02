@@ -4,6 +4,7 @@ pipeline{
 	environment{
 	    version = '1.7.3'
 	    db_name = 'Ibt_db'
+	    Author = 'Mr_Dromor'
 	}
     parameters{
         string (name: 'Mose_app', defaultValue: 'master', description: 'Enter the Build Branch')
@@ -50,7 +51,7 @@ pipeline{
                print env.version
                print env.db_name
                }
-
+                sh 'echo $name'
             }
         }
 	}
