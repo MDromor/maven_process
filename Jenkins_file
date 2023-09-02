@@ -41,7 +41,7 @@ pipeline{
         }
         stage('env variable'){
             steps{
-               sh 'echo "$db_name"'
+               echo '${env.db_name}'
                echo '${env.version}'
 
             }
