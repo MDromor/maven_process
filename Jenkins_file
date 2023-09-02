@@ -5,7 +5,9 @@ pipeline{
 	    version = '1.7.3'
 	    db_name = 'Ibt_db'
 	}
-
+    parameters{
+        string (name: 'Mose_app', defaultValue: 'master', description: 'Enter the Build Branch')
+    }
 	stages{
 		stage('HELLO'){
 			steps{
