@@ -30,7 +30,7 @@ pipeline{
 
         stage('List File'){
             steps{
-                bat dir
+                bat 'dir'
             }
         }
 	}
