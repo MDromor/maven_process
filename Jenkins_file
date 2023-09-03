@@ -55,5 +55,10 @@ pipeline{
             }
         }
 	}
+    post{
+        always{
+        echo "THIS IS THE RESULT OF YOUR RUN"
+        }
+    }
 
 }
