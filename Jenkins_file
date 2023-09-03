@@ -51,7 +51,7 @@ pipeline{
                print env.version
                print env.db_name
                }
-                sh 'echo $name'
+                sh 'echo $Author'
             }
         }
 	}
