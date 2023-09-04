@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage('git checkout'){
-            step{
+            steps{
             git changelog: false, credentialsId: 'Moses_D', poll: false, url: 'https://github.com/MDromor/maven_process.git'
             }
         }
