@@ -43,7 +43,7 @@ pipeline{
                 }
             }
         }
-        stage ('Deploy with Config_file_Pro'){
+        stage ('Deploy with Config_File_Prov'){
             steps{
                 withMaven( maven: 'maven_3.8') {
                 }
