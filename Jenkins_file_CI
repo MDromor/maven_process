@@ -43,5 +43,14 @@ pipeline{
                 }
             }
         }
+        stage ('Deploy with Config_file_Pro'){
+            steps{
+                withMaven( maven: 'maven_3.8') {
+                }
+                configFileProvider([configFile(fileId: 'artifactory-settings', variable: 'teams_mvn_settings')]) {
+                sh 'mvn deploy -s teams_mvn_settings'
+                }
+            }
+        }
     }
 }
