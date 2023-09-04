@@ -36,9 +36,10 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                withMaven( maven: 'maven_3.8')
+                withMaven( maven: 'maven_3.8') {
                 withCredentials([file(credentialsId: 'settings_mvn', variable: 'Mvn_Settings')]) {
                 sh 'mvn deploy -s $Mvn_Settings'
+                }
                 }
             }
         }
