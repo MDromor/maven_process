@@ -75,5 +75,18 @@ pipeline{
                 }
             }
         }
+        stage('Deploy to Dev'){
+            steps{
+                script{
+                    def remote = [name: 'Dev', host: '157.245.13.5', allowAnyHosts: true]
+                    withCredentials([usernamePassword(credentialsId: 'Digital_Ocrean_Credential', passwordVariable: 'pass', usernameVariable: 'user')]) {
+
+                        remote.user=user
+                        remote.ppassword = pass
+                        sshPut remote:remote, from 'target/Mose_app-SNAPSHOT.jar' , into '/opt/tomcat/apps'
+                    }
+                }
+            }
+        }
     }
 }
