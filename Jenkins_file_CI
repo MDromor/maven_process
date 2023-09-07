@@ -83,7 +83,7 @@ pipeline{
 
                         remote.user=user
                         remote.ppassword = pass
-                        sshPut remote:remote, from 'target/Mose_app-SNAPSHOT.jar' , into '/opt/tomcat/apps'
+                        sshPut remote:remote, from 'target/Mose_app-SNAPSHOT.jar', into '/opt/tomcat/apps'
                     }
                 }
             }
