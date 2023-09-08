@@ -82,7 +82,7 @@ pipeline{
                     withCredentials([usernamePassword(credentialsId: 'Digital_ocean', passwordVariable: 'password', usernameVariable: 'username')]) {
                         remote.user = username
                         remote.password = password
-                        sshPut remote: remote, from: 'target/Mose_app-1.5-SNAPSHOT.jar' , into: 'opt/tomcat/apps'
+                        sshPut remote: remote, from: '/var/lib/jenkins/workspace/July_cohort/Moses/Maven_cI_pipeline/target/Mose_app-1.5-SNAPSHOT.jar' , into: 'opt/tomcat/apps'
                     }
                 }
             }
